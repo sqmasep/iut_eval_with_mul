@@ -40,7 +40,11 @@ animate(
 );
 
 revealText();
-
+animate(
+  ".pesquette",
+  { scale: [1, 1.1] },
+  { duration: 4, repeat: Infinity, direction: "alternate" },
+);
 scroll(
   animate(".pesquette", {
     y: [0, 800],
@@ -58,3 +62,17 @@ scroll(
     rotateZ: [0, 150],
   }),
 );
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".video-intro") as HTMLVideoElement;
+  video.addEventListener("play", e => {
+    document.body.style.overflow = "hidden";
+  });
+
+  video?.addEventListener("ended", e => {
+    document.body.style.overflow = "";
+    animate(".video-intro", { opacity: [1, 0] }, { duration: 1 }).finished.then(
+      video.remove,
+    );
+  });
+});
