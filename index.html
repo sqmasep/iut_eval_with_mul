@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body
+    class="relative overflow-x-clip bg-zinc-950 pb-[1400px] font-sans text-zinc-200 selection:bg-zinc-900 selection:text-zinc-400"
+  >
+    <!-- Mouse -->
+    <div
+      class="mouse pointer-events-none fixed h-12 w-12 animate-pulse select-none rounded-full border border-solid border-zinc-400"
+    ></div>
+
+    <div class="absolute top-0 flex items-center gap-2 p-2">
+      <div class="h-2 w-2 animate-pulse rounded-full bg-red-600"></div>
+      <span class="font-mono text-sm uppercase">Launching...</span>
+    </div>
+
+    <div class="absolute -z-10 select-none overflow-clip">
+      <img src="/stars.png" class="stars" />
+    </div>
+
+    <div class="mx-auto max-w-xl pt-32">
+      <h1 class="mt- flex flex-col justify-center text-9xl text-zinc-200">
+        <span class="text-center">Thomas</span>
+        <span class="text-center font-bold text-zinc-400 backdrop-blur-lg"
+          >Pesquet</span
+        >
+      </h1>
+
+      <button
+        class="font-mono mx-auto mt-12 block rounded-3xl border-4 border-solid border-zinc-400 px-4 py-1 uppercase backdrop-blur-lg transition hover:scale-110 active:scale-95"
+      >
+        C'est parti !
+      </button>
+    </div>
+
+    <!-- Pesquette -->
+    <img
+      src="/pesquette.png"
+      class="pesquette absolute top-0 -z-10 scale-50 brightness-50"
+    />
+
+    <!-- ISS -->
+    <img
+      src="/iss.png"
+      class="iss absolute top-0 -z-10 scale-50 brightness-50"
+    />
+
+    <div class="mx-auto flex max-w-lg flex-col gap-4">
+      <h2
+        class="text font-mono mt-12 text-center text-5xl font-medium uppercase"
+      >
+        Une mission exceptionnelle
+      </h2>
+      <p class="text-center text-zinc-200">
+        c'est un gigachad voyez-vous c'est un crackito ce mec
+      </p>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
