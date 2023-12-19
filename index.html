@@ -7,14 +7,14 @@
     <title>Vite + TS</title>
   </head>
   <body
-    class="relative overflow-x-clip bg-zinc-950 pb-[1400px] font-sans text-zinc-200 selection:bg-zinc-900 selection:text-zinc-400"
+    class="relative overflow-x-hidden bg-zinc-950 font-sans text-zinc-200 selection:bg-zinc-900 selection:text-zinc-400"
   >
     <!-- Mouse -->
     <div
       class="mouse pointer-events-none fixed h-12 w-12 animate-pulse select-none rounded-full border border-solid border-zinc-400"
     ></div>
 
-    <div class="absolute top-0 flex items-center gap-2 p-2">
+    <div class="fixed top-0 flex items-center gap-2 p-2">
       <div class="h-2 w-2 animate-pulse rounded-full bg-red-600"></div>
       <span class="font-mono text-sm uppercase">Launching...</span>
     </div>
@@ -23,7 +23,7 @@
       <img src="/stars.png" class="stars" />
     </div>
 
-    <div class="intro absolute inset-0 z-50">
+    <!-- <div class="intro absolute inset-0 z-50">
       <video
         class="video-intro"
         src="/intro.mp4"
@@ -31,7 +31,7 @@
         controls
         muted
       ></video>
-    </div>
+    </div> -->
 
     <!-- da header -->
     <div class="mx-auto max-w-xl pt-32">
@@ -71,6 +71,62 @@
         c'est un gigachad voyez-vous c'est un crackito ce mec
       </p>
     </div>
+
+    <div class="container mx-auto mt-[900px] grid grid-cols-2">
+      <div></div>
+      <div class="yaytso flex flex-col items-start gap-4">
+        <h2 class="font-mono text-2xl font-bold uppercase text-zinc-400">
+          Un astronaute de légende
+        </h2>
+        <p class="text-lg text-zinc-500">
+          C'est en 2008 que tout commence pour Thomas Pesquet. Quand l'agence
+          spatiale européenne lance une nouvelle campagne de recrutement cette
+          année là, et parmis plus de 8000 candidats, Thomas Pesquet est retenu
+          parmis 6 autres. C'est l'un des plus jeunes recrutés par l'agence
+          européenne
+        </p>
+      </div>
+    </div>
+
+    <div class="travel relative mt-96 p-64">
+      <img
+        src="/fx-film.png"
+        class="fx-film absolute inset-0 -z-10 opacity-20 mix-blend-lighten brightness-50"
+      />
+
+      <div class="flex flex-col gap-2">
+        <h2 class="font-mono text-center text-4xl uppercase">
+          Le voyage commence
+        </h2>
+        <p class="text-center text-xl text-zinc-500">On y va !</p>
+      </div>
+
+      <img src="/neptune.png" class="neptune absolute brightness-50" />
+      <img src="/voyager.png" class="voyager absolute z-10 brightness-50" />
+
+      <div class="yaytso mt-96 flex flex-col items-start gap-2">
+        <h2 class="font-mono text-2xl uppercase">j'aime pas ce que je fais</h2>
+        <p class="text-zinc-500">c'est vraiment pas ouf</p>
+      </div>
+    </div>
+
+    <div class="yaytso conquest relative pt-[800px]">
+      <h2 class="font-mono whitespace-nowrap text-center text-8xl uppercase">
+        L'histoire de l'aérospatiale
+      </h2>
+      <div class="relative flex justify-center">
+        <img src="/moon.png" class="moon inset-0 z-20 w-1/2 brightness-50" />
+        <img
+          src="/urss.png"
+          class="urss absolute top-0 z-40 w-72 rotate-45 scale-150 brightness-50"
+        />
+        <img
+          src="/usa.png"
+          class="usa absolute bottom-1/2 z-30 w-64 brightness-50"
+        />
+      </div>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
