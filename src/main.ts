@@ -7,6 +7,7 @@ import {
 import "./style.css";
 import { animate, inView, scroll, spring, stagger, timeline } from "motion";
 import { revealText } from "./utils/animations/revealText";
+import "./cards";
 
 const buttons = document.querySelectorAll("button, a, .cursor-pointer");
 
@@ -122,16 +123,25 @@ scroll(
   },
 );
 
-inView(".urss, .usa", () => {
-  animate(
-    ".urss, .usa",
-    {
-      skewY: [0, 20, 0],
-      transformOrigin: ["bottom"],
-    },
-    { duration: 2, repeat: Infinity, easing: "linear" },
-  );
-});
+animate(
+  ".urss",
+  {
+    rotateZ: [null, 20],
+    skewY: [0, 20, 0],
+    transformOrigin: ["bottom"],
+  },
+  { duration: 2, direction: "alternate", repeat: Infinity, easing: "linear" },
+);
+
+animate(
+  ".usa",
+  {
+    transform: [],
+    skewY: [0, 20, 0],
+    transformOrigin: ["bottom"],
+  },
+  { duration: 2, repeat: Infinity, easing: "linear" },
+);
 
 inView(".moon", () => {
   animate(
@@ -169,3 +179,12 @@ inView(".yaytso", ({ target }) => {
     ],
   ]);
 });
+
+scroll(
+  animate(".tesla", {
+    x: [2100, -200],
+    rotateZ: [0, -40],
+    y: [-1200, -500],
+  }),
+  { target: document.querySelector(".conquest")! },
+);
